@@ -9,7 +9,7 @@
     if(!check_input('name')){
         array_push($error, "Name filed cannot be empty");
     }
-    if(!check_input('sex')) {
+    if(!check_input('gender')) {
         array_push($error, "Inavilid Sex - Please select one");
     }
     if(!check_input('email')) {
@@ -35,10 +35,11 @@
         $name = htmlspecialchars(trim($_POST['name']));
         $email = htmlspecialchars(trim($_POST['email']));
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-        $sex = $_POST['sex'];
+        $gender = $_POST['gender'];
         $username = htmlspecialchars(trim($_POST['username']));
         $password = htmlspecialchars(trim($_POST['password']));
-        $password_encoded = sha1(md5(trim($_POST['password'])));
+        $password_encoded = sha1($_POST['password']);
+        # molto debole per hashing di password. Si dovrebbero usare algoritmi più complessi ma per questa esercitazione è preferibile la leggibilità rispetto alla sicurezza
         $cod_fiscale = htmlspecialchars(trim($_POST['cod_fiscale']));
     }
 ?>
@@ -76,9 +77,12 @@
 
 <div class="container">
 <?php if(empty($error)) : ?>
-    <h1>Input:</h1>
+    <div class="alert alert-success">
+        <strong>Registration Successful.</strong>
+    </div>
+    <h2>Input:</h2>
     <span class="block"><strong>Name</strong> => <?php echo $name ?></span>
-    <span class="block"><strong>Sex</strong> => <?php echo $sex ?></span>
+    <span class="block"><strong>Gender</strong> => <?php echo $gender ?></span>
     <span class="block"><strong>Fiscal Code</strong> => <?php echo $cod_fiscale ?></span>
     <span class="block"><strong>Email</strong> => <?php echo $email ?></span>
     <span class="block"><strong>Username</strong> => <?php echo $username ?></span>

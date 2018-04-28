@@ -1,5 +1,4 @@
 Options +Indexes
-php_flag short_open_tag On
 php_flag display_errors On
 php_value post_max_size 16M
 php_value memory_limit 32M

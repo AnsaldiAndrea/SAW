@@ -1,3 +1,6 @@
+<?php
+    $a = 10;
+?>
 <html>
 
 <head>
@@ -5,10 +8,9 @@
 </head>
 
 <body>
-    <?php
-        $a = 'Hello World';
-        echo '<h1>'.$a.'</h1>';
-    ?>
+    <h1>
+    <?= $a ?>
+    </h1>    
 </body>
 
 </html>

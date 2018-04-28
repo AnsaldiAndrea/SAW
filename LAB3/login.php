@@ -4,9 +4,7 @@
     }
 
     $csv = array_map('str_getcsv', file('myusers.txt'));
-    array_shift($csv);
-    array_shift($csv);
-    array_shift($csv);
+    $csv = array_slice($csv, 3);
 
     $username = $_POST['username'];
     $password = $_POST['password'];
