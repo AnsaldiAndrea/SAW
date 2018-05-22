@@ -1,0 +1,4 @@
+1) Inserire nel file 'credential.json' le proprie credenziali di mysql
+2) Esegure lo script 'setup.php'
+3) Se non ci sono stati errori, procedere con il punto successivo, altrimenti, controllare di aver inserito le credenziali corrette o che non esista già un database chiamato 'lab04'
+4) Dopo avre finito la correzione, eseguire lo script 'teardown.php'
