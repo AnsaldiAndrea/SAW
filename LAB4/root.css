@@ -1,0 +1,25 @@
+.footer {
+    padding: 10px;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.page-navigation {
+    padding-bottom: 10px;
+}
+
+.center-block {
+    float: none;
+}
+
+.block {
+    display: block;
+}

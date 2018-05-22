@@ -1,2 +1,4 @@
 .vscode/
 *.log
+*.zip
+*/db_credential.json
