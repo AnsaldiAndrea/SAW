@@ -37,16 +37,21 @@
 
 
 <div class="container">
+    <?php if(isset($_SESSION['error'])) : ?>
+        <div class="alert alert-<?php echo $_SESSION['error'][0]?>">
+            <?php echo $_SESSION['error'][1]; unset($_SESSION['error']) ?>
+        </div>
+    <?php endif ?>
     <?php if(!isset($_SESSION['logged_in'])) : ?>
-    <div class="alert alert-danger">
-        <strong>Unauthorized!</strong><br>
-        Please <a href="login.php">Login</a>
-    </div>
+        <div class="alert alert-danger">
+            <strong>Unauthorized!</strong><br>
+            Please <a href="login.php">Login</a>
+        </div>
     <?php else: ?>
-    <div class="alert alert-success">
-        <strong>Login Successful.</strong><br>
-        Welcome <strong><?php echo $_SESSION['name'] ?></strong>
-    </div>
+        <div class="alert alert-success">
+            <strong>Login Successful.</strong><br>
+            Welcome <strong><?php echo $_SESSION['name'] ?></strong>
+        </div>
     <?php endif ?>
 </div>
 
@@ -58,8 +63,6 @@
                 <a href="login.php">Login</a>
                 <br>
                 <a href="register.php">Register</a>
-                <br>
-                <a href="404.php">About</a>
             </div>
             <div class="col-md-9">
                 <span class="text-muted">In vel sapien enim. Quisque a velit nisi. Ut gravida turpis ut neque commodo semper. Aenean eu consequat nunc. Suspendisse potenti. Curabitur a turpis ultricies, luctus purus ut, bibendum tortor. Nullam in libero placerat, gravida est at, placerat velit. Duis nec lobortis neque. </span>

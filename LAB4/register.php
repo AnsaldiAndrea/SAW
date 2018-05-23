@@ -56,7 +56,7 @@
             <br>
             <p>If you want to create a new one: <a href="logout.php">Logout</a></p>
         <?php else : ?>
-        <form action="checkdata.php" method="post">
+        <form action="registration.php" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input class="form-control"  id="name" name="name">

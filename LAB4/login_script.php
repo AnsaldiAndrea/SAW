@@ -7,14 +7,14 @@
 
     session_start();
 
-    include("db_connection.php");
+    include("db/get_connection.php");
 
     $username = htmlspecialchars(trim($_POST['username']));
     $username = $db->real_escape_string($username);
 
     $password = sha1($_POST['password']);
 
-    $stmt = $db->prepare("SELECT * FROM User WHERE username=? and password=?");
+    $stmt = $db->prepare("SELECT * FROM User WHERE username=? AND password=?");
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $result = $stmt->get_result()->fetch_array(MYSQLI_ASSOC);
