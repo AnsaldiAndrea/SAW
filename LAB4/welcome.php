@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="root.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>MySite:Welcome</title>
+    <title>MySite: Welcome</title>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
             <?php if(isset($_SESSION['logged_in'])) : ?>
-                <li><a href="404.php">Welcome <?php echo $_SESSION['username'] ?></a><li>
+                <li><a href="#">Welcome <?php echo $_SESSION['username'] ?></a><li>
                 <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             <?php else : ?>
                 <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Register</a></li>
